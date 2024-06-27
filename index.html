@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="password-form">
+            <h2>Please enter the password to access the website:</h2>
+            <form id="password-form">
+                <input type="password" id="password-input" placeholder="Enter password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="main-content" style="display: none;">
+        <div class="container">
+            <div class="image-container">
+                <img src="images/download.jpg" alt="Welcome Image">
+            </div>
+            <a href="home.html" class="get-started-button">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Include the external JavaScript file -->
+    <script src="password.js"></script>
+</body>
+</html>
