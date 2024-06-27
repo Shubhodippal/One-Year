@@ -7,11 +7,13 @@ body {
 h1 {
     margin-top: 20px;
 }
+
 p{
     font-family: 'Gill Sans';
     font-size: 30px;
     font-style: oblique;
 }
+
 .image-list {
     display: flex;
     flex-direction: column;
@@ -24,7 +26,8 @@ p{
 }
 
 .container img {
-    max-width: 100%;
+    width: 90%; /* Use a relative unit to make the images responsive */
+    max-width: 600px; /* Limit the maximum width on larger screens */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,6 +36,31 @@ p{
 
 .container p {
     margin-top: 10px;
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-container video {
+    width: 90%; /* Use a relative unit to make the video responsive */
+    max-width: 600px; /* Limit the maximum width on larger screens */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-container p {
+    margin-top: 10px;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .container img, .video-container video {
+        width: 100%; /* Make the images and video take the full width on smaller screens */
+        max-width: none; /* Remove the maximum width restriction */
+    }
 }
 
 .next_button {
